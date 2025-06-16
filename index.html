@@ -5,19 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>abdo-pf</title>
 
-  <!-- ✅ منع ظهور صورة عند مشاركة الرابط -->
-  <meta property="og:title" content="abdo-pf" />
-  <meta property="og:description" content="Portfolio of Ghedir Abderrahmane" />
+  <!-- منع الزحف والمعاينة -->
+  <meta name="robots" content="noindex,nofollow,noimageindex" />
+  <meta name="googlebot" content="noindex,nofollow,noimageindex" />
+  <meta property="og:title" content="Portfolio - Ghedir Abderrahmane" />
+  <meta property="og:description" content="Front End Developer & CS Student" />
   <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="robots" content="noimageindex" />
-  <meta name="googlebot" content="noimageindex" />
+  <meta name="twitter:card" content="none" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-  
     <header>
       <h1>
         <span class="greeting">Hi, my name is</span>
@@ -26,6 +25,7 @@
       <p>I'm a computer science engineering student, front end developer</p>
     </header>
 
+    <!-- الصورة بالخلفية فقط -->
     <div class="profile-photo"></div>
 
     <div class="skills">
@@ -43,6 +43,12 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- كود لإخفاء الصور عند دخول بوت -->
+  <script>
+    const isBot = /bot|crawl|spider|slurp|facebook|instagram|whatsapp|preview/i.test(navigator.userAgent);
+    if (isBot) {
+      document.querySelectorAll("img").forEach(img => img.remove());
+    }
+  </script>
 </body>
 </html>
