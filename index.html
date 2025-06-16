@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>abdo-pf</title>
 
-  <!-- منع الزحف والمعاينة -->
-  <meta name="robots" content="noindex,nofollow,noimageindex" />
-  <meta name="googlebot" content="noindex,nofollow,noimageindex" />
+  <!-- معاينة الرابط عند مشاركته -->
   <meta property="og:title" content="Portfolio - Ghedir Abderrahmane" />
-  <meta property="og:description" content="Front End Developer & CS Student" />
-  <meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
-  <meta name="twitter:card" content="none" />
+  <meta property="og:description" content="I'm a front end developer & CS student" />
+  <meta property="og:image" content="https://assets.onecompiler.app/434b9smgd/43bmem6dj/Picsart_25-01-08_12-01-09-311.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://abdo01100.github.io/abdo.sitewep1/" />
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio - Ghedir Abderrahmane" />
+  <meta name="twitter:description" content="I'm a front end developer & CS student" />
+  <meta name="twitter:image" content="https://assets.onecompiler.app/434b9smgd/43bmem6dj/Picsart_25-01-08_12-01-09-311.jpg" />
+
+  <!-- استايل الموقع -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -25,8 +30,9 @@
       <p>I'm a computer science engineering student, front end developer</p>
     </header>
 
-    <!-- الصورة بالخلفية فقط -->
-    <div class="profile-photo"></div>
+    <div class="profile-photo">
+      <img src="https://assets.onecompiler.app/434b9smgd/43bmem6dj/Picsart_25-01-08_12-01-09-311.jpg" alt="Abderrahmane" />
+    </div>
 
     <div class="skills">
       <h2 class="skills-title">My Skills</h2>
@@ -43,12 +49,6 @@
     </div>
   </div>
 
-  <!-- كود لإخفاء الصور عند دخول بوت -->
-  <script>
-    const isBot = /bot|crawl|spider|slurp|facebook|instagram|whatsapp|preview/i.test(navigator.userAgent);
-    if (isBot) {
-      document.querySelectorAll("img").forEach(img => img.remove());
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
