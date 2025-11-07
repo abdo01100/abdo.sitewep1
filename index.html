@@ -1,39 +1,250 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-  <title>abdo-pf</title>    <meta name="robots" content="noindex,nofollow" />  
-  <meta property="og:title" content="" />  
-  <meta property="og:description" content="" />  
-  <meta property="og:image" content="" />  
-  <meta name="twitter:card" content="none" />    <link rel="stylesheet" href="styles.css" />  
-</head>  
-<body>  
-  <div class="container">  <header>  
-  <h1>  
-    <span class="greeting">Hi, my name is</span>  
-    <span class="name">Ghedir Abderrahmane</span>  
-  </h1>  
-  <p>I'm a computer science engineering student, front end developer</p>  
-</header>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdo | Open Source Community 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-<div class="profile-photo">  
-  <img src="https://assets.onecompiler.app/434b9smgd/43bmem6dj/Picsart_25-01-08_12-01-09-311.jpg" alt="Abderrahmane" />  
-</div>  
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <!-- LOGO تم حذفه كما طلبت؛ نص العنوان فقط -->
+        <div class="title">
+          <div class="main">Abdo | Open Source Community</div>
+          <div class="sub">© 2026</div>
+        </div>
+      </div>
 
-<div class="skills">  
-  <h2 class="skills-title">My Skills</h2>  
-  <div class="skill-icons">  
-    <img src="https://assets.onecompiler.app/434b9smgd/43bmem6dj/pngwing.com%20(3).png" alt="HTML" class="skill-icon" />  
-    <img src="https://assets.onecompiler.app/434b9smgd/43bmem6dj/pngwing.com%20(5).png" alt="CSS" class="skill-icon" />  
-    <img src="https://assets.onecompiler.app/434b9smgd/43bmem6dj/pngwing.com%20(6).png" alt="JavaScript" class="skill-icon" />  
-  </div>  
-</div>  
-  
-<div class="contact">  
-  <h2>Contact Me</h2>  
-  <p>Email: <a href="mailto:abdoudha4@gmail.com">abdoudha4@gmail.com</a></p>  
-</div>
+      <div class="header-right">
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-  </div>    <script src="script.js"></script>  </body>  
-</html>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+
+        <!-- صورتك الدائرية الصغيرة في الهيدر -->
+        <img class="header-profile" src="https://i.postimg.cc/xTggJQX3/IMG-2.jpg" alt="Abdo small profile">
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section class="hero" id="home">
+    <div class="floating-elements" aria-hidden="true">
+      <div class="floating-element" style="width:60px;height:60px;left:6%;bottom:-20px;"></div>
+      <div class="floating-element" style="width:40px;height:40px;left:22%;bottom:-10px;animation-delay:2s;"></div>
+      <div class="floating-element" style="width:80px;height:80px;left:50%;bottom:-30px;animation-delay:4s;"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="profile-container">
+        <div class="profile-halo" aria-hidden="true"></div>
+        <!-- الصورة الدائرية الكبيرة: object-position مضبوط لإظهار الشعر -->
+        <img class="profile-img" src="https://i.postimg.cc/xTggJQX3/IMG-2.jpg" alt="Abderrahmane Ghedir">
+      </div>
+
+      <h1>Abderrahmane Ghedir</h1>
+      <p>Front-End Developer & Computer Science Engineering Student</p>
+      <a class="btn" href="#contact">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hello! I'm Abderrahmane Ghedir, a second-year Computer Science Engineering student at the University of Batna 2 in Algeria.</p>
+          <p>I'm passionate about web development, open-source collaboration and cybersecurity. I enjoy building interactive user interfaces and learning new technologies.</p>
+
+          <div style="margin-top:22px">
+            <div class="contact-item" style="margin-bottom:12px">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4 style="margin:0 0 6px 0;color:var(--text)">Email</h4>
+                <p style="margin:0;color:var(--muted)">abdoudha4@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4 style="margin:0 0 6px 0;color:var(--text)">Phone</h4>
+                <p style="margin:0;color:var(--muted)">0675803388</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills & Languages</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Technical Skills</h3>
+          <div class="skills-list">
+            <span class="skill-item">HTML</span>
+            <span class="skill-item">CSS</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">C Programming</span>
+            <span class="skill-item">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skills-list">
+            <span class="skill-item">Arabic (Native)</span>
+            <span class="skill-item">French (Fluent)</span>
+            <span class="skill-item">English (Intermediate)</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Interests</h3>
+          <div class="skills-list">
+            <span class="skill-item">Open Source</span>
+            <span class="skill-item">UI/UX</span>
+            <span class="skill-item">Cybersecurity</span>
+            <span class="skill-item">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>University of Batna 2</h3>
+        <p class="education-date">2026 - Present</p>
+        <p>Studying Computer Science Engineering (Second year).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4 style="margin:0;color:var(--text)">Email</h4>
+              <p style="margin:0;color:var(--muted)">abdoudha4@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4 style="margin:0;color:var(--text)">Location</h4>
+              <p style="margin:0;color:var(--muted)">Batna, Algeria</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4 style="margin:0;color:var(--text)">Phone</h4>
+              <p style="margin:0;color:var(--muted)">0675803388</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <!-- Form posts to send_mail.php -->
+          <form action="send_mail.php" method="post" id="contactForm">
+            <div class="form-group">
+              <label for="name" style="color:var(--muted)">Name</label>
+              <input id="name" name="name" class="form-control" type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" style="color:var(--muted)">Email</label>
+              <input id="email" name="email" class="form-control" type="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+              <label for="message" style="color:var(--muted)">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Your message" required></textarea>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+            <div id="formStatus" class="form-status" aria-live="polite" style="margin-top:12px"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between">
+      <div class="footer-logo">Abdo | Open Source Community</div>
+      <div style="display:flex;gap:12px" class="social-links">
+        <a href="#" aria-label="github"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="copyright">© 2026 Abdo | Open Source Community. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // hamburger toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if(hamburger){
+      hamburger.addEventListener('click', ()=> navLinks.classList.toggle('active'));
+    }
+
+    // IntersectionObserver for fade-in
+    const sections = document.querySelectorAll('section');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, {threshold:0.18});
+    sections.forEach(s => io.observe(s));
+
+    // show status message if redirected with ?status=sent or ?status=error
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('status');
+    if(status){
+      const el = document.getElementById('formStatus');
+      if(el){
+        if(status === 'sent') {
+          el.textContent = 'Message sent — I will contact you soon. ✅';
+          el.style.color = '#b5ffcf';
+        } else {
+          el.textContent = 'Sending failed — please try again later. ❌';
+          el.style.color = '#ffb3b3';
+        }
+        // remove query from URL (so refresh won't reshow)
+        history.replaceState(null, '', window.location.pathname);
+      }
+    }
+  </script>
+</body>
+        </html>
+          
