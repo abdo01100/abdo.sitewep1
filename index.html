@@ -114,6 +114,8 @@
   </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -245,7 +247,7 @@
         </div>
 
         <div class="contact-form">
-          <form action="send_mail.php" method="post" id="contactForm">
+          <form id="contactForm">
             <div class="form-group">
               <label for="name">Name</label>
               <input id="name" name="name" class="form-control" type="text" placeholder="Your name" required>
@@ -276,11 +278,14 @@
   </footer>
 
   <script>
+    // Hamburger menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     if(hamburger){
       hamburger.addEventListener('click', ()=> navLinks.classList.toggle('active'));
     }
+
+    // Scroll animation
     const sections = document.querySelectorAll('section');
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
@@ -288,6 +293,24 @@
       });
     }, {threshold:0.18});
     sections.forEach(s => io.observe(s));
+
+    // EmailJS
+    (function(){
+      emailjs.init("YOUR_USER_ID"); // ضع هنا User ID الخاص بك من EmailJS
+    })();
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(function(){
+          document.getElementById('formStatus').innerText = "Message sent successfully!";
+          form.reset();
+        }, function(error){
+          document.getElementById('formStatus').innerText = "Failed to send message. Try again.";
+          console.error(error);
+        });
+    });
   </script>
 </body>
 </html>
