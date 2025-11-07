@@ -245,7 +245,7 @@ footer{padding:26px 0;text-align:center;color:var(--muted);border-top:1px solid 
 <!-- JS -->
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-(function(){emailjs.init("YOUR_USER_ID");})(); // ضع User ID هنا
+(function(){emailjs.init("nFO9bNLAdaYKqYVVz");})(); // ضع User ID هنا
 
 // Hamburger menu
 const hamburger=document.querySelector('.hamburger');
@@ -265,7 +265,7 @@ sections.forEach(s=>io.observe(s));
 const form=document.getElementById('contactForm');
 form.addEventListener('submit',function(e){
   e.preventDefault();
-  emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID',this)
+  emailjs.sendForm('service_ehfh9er','template_rkwpr6c',this)
   .then(function(){document.getElementById('formStatus').innerText='Message sent successfully!';form.reset();},
         function(err){document.getElementById('formStatus').innerText='Failed to send message.';console.error(err)});
 });
