@@ -43,6 +43,7 @@
       padding:14px 18px;
     }
     .logo { display:flex; align-items:center; gap:12px; color:var(--text); font-weight:700; font-size:1.05rem; }
+    .logo img { width:40px; height:40px; border-radius:50%; }
     .logo .title { display:flex; flex-direction:column; line-height:1; }
     .logo .title .main { font-size:1rem; color:var(--text); }
     .logo .title .sub { font-size:0.78rem; color:var(--muted); margin-top:2px; }
@@ -98,6 +99,8 @@
     input.form-control, textarea.form-control{ width:100%; padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06); background:transparent; color:var(--text) }
     input.form-control:focus, textarea.form-control:focus{ outline:none; box-shadow:0 6px 30px rgba(111,45,189,0.08) }
 
+    .form-status{ margin-top:12px; font-weight:500; color:#b7ffb7; }
+
     footer{ padding:26px 0; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.03); margin-top:30px }
 
     @media(max-width:992px){
@@ -123,6 +126,7 @@
   <header>
     <div class="container navbar">
       <div class="logo">
+        <img src="https://i.postimg.cc/xTggJQX3/IMG-2.jpg" alt="Logo">
         <div class="title">
           <div class="main">Abdo | Open Source Community</div>
           <div class="sub">© 2026</div>
@@ -241,7 +245,7 @@
             <div class="contact-icon"><i class="fab fa-discord"></i></div>
             <div>
               <h4>Discord</h4>
-              <p>nxo.dev</p>
+              <p><a href="https://discord.gg/gyvJt22T" target="_blank">nxo.dev</a></p>
             </div>
           </div>
         </div>
@@ -257,7 +261,7 @@
               <textarea id="message" name="message" class="form-control" placeholder="Your message" required></textarea>
             </div>
             <button class="btn" type="submit">Send Message</button>
-            <div id="formStatus" class="form-status" aria-live="polite" style="margin-top:12px"></div>
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
           </form>
         </div>
       </div>
@@ -272,6 +276,7 @@
         <a href="https://github.com/" aria-label="github"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/" aria-label="linkedin"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/abdo_ghd?igsh=aDF6eWc0MWlmdGU2" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://discord.gg/gyvJt22T" aria-label="discord"><i class="fab fa-discord"></i></a>
       </div>
     </div>
     <div class="copyright">© 2026 Abdo | Open Source Community. All rights reserved.</div>
@@ -294,23 +299,6 @@
     }, {threshold:0.18});
     sections.forEach(s => io.observe(s));
 
-    // EmailJS
+    // EmailJS initialization
     (function(){
-      emailjs.init("YOUR_USER_ID"); // ضع هنا User ID الخاص بك من EmailJS
-    })();
-
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-        .then(function(){
-          document.getElementById('formStatus').innerText = "Message sent successfully!";
-          form.reset();
-        }, function(error){
-          document.getElementById('formStatus').innerText = "Failed to send message. Try again.";
-          console.error(error);
-        });
-    });
-  </script>
-</body>
-</html>
+      emailjs.init("YOUR
