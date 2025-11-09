@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abdo | Open Source Community 2026</title>
 
-<!-- Font Awesome -->
+  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
@@ -20,8 +20,7 @@
   --card: rgba(255,255,255,0.03);
   --transition: all 0.35s ease;
 }
-
-/* Reset */
+  
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -31,12 +30,12 @@ body{
   line-height:1.6;
 }
 
-/* Container */
+
 .container{width:90%;max-width:1200px;margin:0 auto;padding:0 15px}
 a{color:var(--purple);text-decoration:none;transition:var(--transition)}
 a:hover{color:var(--green)}
 
-/* Header */
+
 header{
   position:fixed;top:0;left:0;right:0;
   background: rgba(0,0,0,0.85);
@@ -58,7 +57,7 @@ header{
 .header-right{display:flex;align-items:center;gap:14px}
 .header-profile{width:54px;height:54px;border-radius:50%;object-fit:cover;border:3px solid rgba(155,77,255,0.95);box-shadow:0 8px 30px rgba(58,0,114,0.28);}
 
-/* Hero */
+
 .hero{padding:140px 0 80px;text-align:center;position:relative;overflow:hidden}
 .hero-inner{position:relative;z-index:2}
 
@@ -103,7 +102,7 @@ input.form-control:focus,textarea.form-control:focus{outline:none;box-shadow:0 6
 
 footer{padding:26px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:30px}
 
-/* responsive */
+
 @media(max-width:992px){.about-content,.contact-container{grid-template-columns:1fr}header{padding:12px 20px}.nav-links{display:none}.hamburger{display:block}}
 @media(max-width:600px){.profile-img{width:220px;height:220px;object-position:50% 25%}.profile-halo{width:260px;height:260px}.hero{padding-top:120px}}
 </style>
@@ -242,17 +241,17 @@ footer{padding:26px 0;text-align:center;color:var(--muted);border-top:1px solid 
   </div>
 </footer>
 
-<!-- JS -->
+
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-(function(){emailjs.init("nFO9bNLAdaYKqYVVz");})(); // ضع User ID هنا
+(function(){emailjs.init("nFO9bNLAdaYKqYVVz");})();
 
-// Hamburger menu
+
 const hamburger=document.querySelector('.hamburger');
 const navLinks=document.querySelector('.nav-links');
 if(hamburger){hamburger.addEventListener('click',()=>navLinks.classList.toggle('active'))}
 
-// IntersectionObserver fade-in
+
 const sections=document.querySelectorAll('section');
 const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
@@ -261,7 +260,7 @@ const io=new IntersectionObserver((entries)=>{
 },{threshold:0.18});
 sections.forEach(s=>io.observe(s));
 
-// EmailJS form
+
 const form=document.getElementById('contactForm');
 form.addEventListener('submit',function(e){
   e.preventDefault();
